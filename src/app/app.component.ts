@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TopicFront';
+  title = 'Topic-App';
+  menus = [
+    { uri: '/users', item: 'Home', active: true },
+    { uri: '/topics', item: 'Topic', active: false},
+    {uri: '/users', item: 'Users', active: false}
+  ];
+
 }

@@ -1,0 +1,27 @@
+<table class="table table-hover table-sm">
+    <thead>
+        <tr>
+          <th>#</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Pseudo</th>
+          <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users" >
+        <td>{{user.id}}</td>
+        <td>{{user.nom}}</td>
+        <td>{{user.prenom}}</td>
+        <td>{{user.pseudo}}</td>
+        <td>
+          <div class="d-inline mx-4" (click)="removeUser(user)">
+            <i class="mdi mdi-delete"></i>
+          </div>
+          <div class="d-inline mx-4" (click)="editUser(user)">
+            <i class="mdi mdi-mode-edit"></i>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
